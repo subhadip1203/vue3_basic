@@ -11,3 +11,4 @@ command : `npm run serve`
 data : is a function return object. <br>
 1. those object properties can be used inside template
 2. try to not use "v-html" : because it can push dangerous  code inside html (XSS issue)
+3. v-if / v-else remove sor add item in DOM , where as v-show only add css of "display:none" or "display:block"
