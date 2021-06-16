@@ -16,3 +16,4 @@ data : is a function, which return an object. <br>
 5. when using "v-for" to loop through data , always use "v-bind:key"
 6. "v-bind:value" can be used in form item
 7. "v-bind" tells the template that , do not consider "attribute" as string , but a "vue data"
+8. "v-bind" can be used as dynamic attribute ( to be used as "class" , "id" , ""display" , etc) (check : `<button v-bind:[mybindData.item]="!mybindData.isDisable">click me</button>` )
