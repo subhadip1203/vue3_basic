@@ -1,4 +1,5 @@
 <template>
+<div>
   <p>just some text : {{ title.toUpperCase() }}</p>
 
   <p>{{ HtmlText }}</p>
@@ -14,8 +15,12 @@
     <li v-for="(num,key) in objData" v-bind:key="key"> {{key}} => {{num}} </li>
   </ul>
 
-  <input type="text" v-bind:value="title"/>
-
+  <input type="text" v-bind:value="title" /> 
+  <br/>
+  <button v-bind:disabled="mybindData.isDisable">click me</button>
+  <br/>
+  <button v-bind:[mybindData.item]="!mybindData.isDisable">click me</button>
+</div>
 </template>
 
 <script>
@@ -31,6 +36,10 @@ export default {
         name: "subhadip",
         father:"asit",
         mother:"anima"
+      },
+      mybindData:{
+        item: "disabled",
+        isDisable: true
       }
     };
   },
