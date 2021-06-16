@@ -20,6 +20,14 @@
   <button v-bind:disabled="mybindData.isDisable">click me</button>
   <br/>
   <button v-bind:[mybindData.item]="!mybindData.isDisable">click me</button>
+  <br/>
+  <br/>
+  <input type="text" v-model="dynamicformValue" />
+  <br/>
+  <input type="text" v-model.trim="dynamicformValueTrim" />
+  <br/>
+  <textarea v-model.lazy="myTextAreValue"></textarea>  
+  <!-- v.model.lazy : only update store data , after we remove focus from input field -->
 </div>
 </template>
 
@@ -40,7 +48,10 @@ export default {
       mybindData:{
         item: "disabled",
         isDisable: true
-      }
+      },
+      dynamicformValue:"something",
+      dynamicformValueTrim:"extra value",
+      myTextAreValue: "ok"
     };
   },
 };
