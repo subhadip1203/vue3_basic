@@ -28,6 +28,25 @@
   <br/>
   <textarea v-model.lazy="myTextAreValue"></textarea>  
   <!-- v.model.lazy : only update store data , after we remove focus from input field -->
+
+  <br><br>
+  <button v-on:click="title='new title' ">change title</button>
+  <br>
+  <button @click="title='new @ title' ">change Title by @</button>
+  <br><br>
+
+  <form v-on:submit="dynamicformValueTrim='12345' ">
+    <input type="text" v-model.trim="dynamicformValueTrim" />
+    <input type="submit" value="submit" />
+  </form>
+
+  <br><br>
+
+  <form v-on:submit.prevent="dynamicformValueTrim='12345' ">
+    <input type="text" v-model.trim="dynamicformValueTrim" />
+    <input type="submit" value="submit" />
+  </form>
+
 </div>
 </template>
 
