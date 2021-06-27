@@ -8,3 +8,5 @@ computed : are middle between data and method . it returns vanila functions (bec
 
 1. computed properties are catched , do not changed still any dependencies are changed
 2. computed properties : by default has only "getter"  (no "setter" ) , but manually we can provide "setter"
+
+### watch
