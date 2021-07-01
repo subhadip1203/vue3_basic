@@ -17,6 +17,9 @@
         
         <input type="submit" value="submit" />
     </form>
+    <br/>
+    name : <input type="text" ref="my_name_ref" /><br>
+    (we will make this input active by Ref)<br>
   </div>
 </template>
 
@@ -52,8 +55,11 @@ export default {
     formSubmit : function(){
       alert("submited ful name : "+this.fullname)
       this.name =""
-    },
+    }
 
+  },
+  mounted: function(){
+    this.$refs.my_name_ref.focus()
   }
 }
 </script>
