@@ -1,4 +1,5 @@
 <template>
+    <p>direct counter from vuex in Component2 : {{$store.state.vuex_otherdata}}</p>
     <Counter />
 </template>
 
