@@ -1,20 +1,27 @@
 <template>
-    <div>
-        <h1>counter : {{$store.state.count}}</h1>
-        <button> Substract</button>
+    <div>        
+        <h1>counter : {{vux_count}}</h1>
+        <button @click="deduct_to_count(1)"> Substract</button>
         <input class="my_input" type="text" v-model="my_num" />
-        <button> Add</button>
+        <button @click="add_to_Count(1)"> Add</button>
     </div>
 </template>
 
 <script>
+
+import {mapState , mapMutations} from 'vuex'
 export default {
     name: 'Counter',
-    data: function() {
+    data() {
         return{            
             my_num:1
-        }
-       
+        }       
+    },
+    computed : {
+        ...mapState(["vux_count"])
+    },
+    methods: {
+        ...mapMutations(["add_to_Count","deduct_to_count"])
     }
 }
 </script>
