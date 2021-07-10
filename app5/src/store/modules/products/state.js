@@ -1,4 +1,4 @@
 export default {
-    products: [],
+    products: [{id:1 ,name: 'pahari'}],
     product: null,
 }

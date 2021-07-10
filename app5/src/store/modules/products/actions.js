@@ -1,16 +1,8 @@
-export const getAllProducts = async ({ commit }) => {
-    fetch('https://fakestoreapi.com//products')
-        .then(res=>res.json())
-        .then(json=>{
-            commit('SET_PRODUCTS',json);
-        })
+export const getAllProducts =  (context) => {
+    // console.log("action called")
+    const data =[
+        {id:2 ,name: 'subh'}
+    ]
+    context.commit('SET_PRODUCTS',data);
     
-}
-
-export const get5Product = ({ commit }, productId) => {
-    fetch('https://fakestoreapi.com//products?limit=5')
-        .then(res=>res.json())
-        .then(json=>{
-            commit('SET_PRODUCTS',json);
-        })
 }
